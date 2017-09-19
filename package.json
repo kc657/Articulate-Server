@@ -8,6 +8,7 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.15.4",
     "express-session": "^1.15.5",
+    "extend": "^3.0.1",
     "foreman": "^2.0.0",
     "jquery-ajax": "^2.1.4",
     "mongoose": "^4.11.6",
@@ -24,5 +25,5 @@
   "scripts": {
     "start": "node server.js"
   },
-   "author": "Kevin Chen"
+  "author": "Kevin Chen"
 }
