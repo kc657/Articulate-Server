@@ -11,13 +11,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 Clone this repository onto your local machine:
 ```
-$ git clone https://github.com/kc657/Articulate-Server.git
+$ git clone https://github.com/kc657/Articulatin-Server.git
 ```
-CD into the Articulate-Server directory and run NPM install:
+CD into the Articulatin-Server directory and run NPM install:
 ```
 $ npm install
 ```
-Start the app:
+Start the server:
 ```
 $ npm start
 ```
