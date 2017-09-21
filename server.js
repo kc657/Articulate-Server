@@ -52,26 +52,32 @@ app.use(function (req, res, next) {
 
 // API ROUTES
 
+// TODO: consider adding an Express.route() Router to handle all 'api' calls to dispatch
+// TODO:
 // Setting Home Route
 app.get('/', function homepage (req, res) {
   res.sendFile(__dirname + '/public/index.html',({root: __dirname}))
 })
+
+// TODO: extract these routes to a routes.js file and require and use them here.
+// TODO: example routing: https://github.com/wdi-atx-11/passport-auth-lab/blob/master/solution-code/config/routes.js
+router.route('/api', router)
 // get all projects by current user
-app.get('/api/projects/:userId', controllers.projects.show)
+app.get('/projects/:userId', controllers.projects.show)
 // get one project
-app.get('/api/projects/showOne/:projectId', controllers.projects.showOne)
+app.get('/projects/showOne/:projectId', controllers.projects.showOne)
 // post new project
-app.post('/api/projects', controllers.projects.create)
+app.post('/projects', controllers.projects.create)
 // delete one project
-app.delete('/api/projects/deleteOne/:projectId', controllers.projects.destroy)
+app.delete('/projects/deleteOne/:projectId', controllers.projects.destroy)
 // get all attempts by current user
-app.get('/api/attempts/:userId', controllers.attempts.show)
+app.get('/attempts/:userId', controllers.attempts.show)
 // post new attempt
-app.post('/api/attempts', controllers.attempts.create)
+app.post('/attempts', controllers.attempts.create)
 // watson token route
-app.get('/api/watson/token', controllers.watson.token)
+app.get('/watson/token', controllers.watson.token)
 // watson toneAnalyzer
-app.get('/api/watson/tone', controllers.watson.toneAnalyzer)
+app.get('/watson/tone', controllers.watson.toneAnalyzer)
 // auth routes
 app.post('/signup', function signup (req, res) {
   console.log(`${req.body.username} ${req.body.password}`)
