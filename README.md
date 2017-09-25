@@ -1,7 +1,6 @@
 # [Articulat.<span/>in](https://articulatin.herokuapp.com/) (Back-end Repository)
 
-
-Articulat.<span/>in is a MERN stack application that helps presentation preparation by analyzing text differential of a written transcript and sound recording. Using Watson APIs, we capture the user's voice input, translate it to text, and compare it to the original transcript using several algorithms. The output of these algorithms provide insight on how far the user may have deviated from the original transcript and tone differentials.
+Articulat.in is an IBM Watson powered MERN stack application. It helps speech preparation by analyzing text differential of a written transcript and user's voice recording. The scoring algorithm in place is the result of solving two unique problems when tackling data comparison; the longest common subsequence problem and the common substrings problem. The output of these algorithms provide insight on how far the user may have deviated from the original transcript and tone differentials.
 
 Please check out [Articulat.<span/>in Front-end Github Repository](https://github.com/kc657/Articulatin-Frontend/) for the front-end code.
 
