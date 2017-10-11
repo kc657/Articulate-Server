@@ -12,10 +12,11 @@ function show (req, res) {
 
 function showOne (req, res) {
   let project_id = req.params.projectId
-  db.Project.find({_id: project_id}, function (err, oneProjects) {
+  db.Project.findOne({_id: project_id}, function (err, oneProjects) {
     if (err) {
       console.log('error finding project by projectId', err)
     }
+    // return value will be a json of one object, not an array of one
     res.json(oneProjects)
   })
 }
